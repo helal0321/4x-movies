@@ -1,0 +1,98 @@
+.slider{
+
+}
+
+
+
+
+.slider .react-multiple-carousel__arrow{
+    bottom: 0;
+    background-color: var(--main-color);
+}
+.swiper-button-next,.swiper-button-prev {
+    background-color: var(--main-color);
+    color: white;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    top: 93%;
+    z-index: 100;
+}
+.swiper-button-next::after,.swiper-button-prev::after{
+    font-size: 23px;
+}
+.slider .react-multiple-carousel__arrow--right {
+
+}
+.react-multi-carousel-dot-list {
+
+}
+.swiper-pagination-bullet {
+    background-color: var(--main-color);
+    border: none;
+    width: 24px;
+    height: 8px;
+    border-radius: 5px;
+    opacity: .8;
+
+}
+.swiper-pagination-bullet-active {
+    opacity: 1;
+}
+.react-multi-carousel-list {
+    padding-bottom: 40px;
+}
+.slider .movieCard{
+
+}
+.slider img{
+
+}
+.movieCard{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+.movieCard img{
+    max-width: 100%;
+    width: 220px;
+    height: 300px;
+    border-radius: 9px;
+}
+.movieCard h1{
+font-size: 25px;
+max-width: 220px;
+margin: auto;
+}
+.movieCard p{
+
+}
+
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+  
+    /* Center slide text vertically */
+
+  }
+  .swiper {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 33px;
+  }
+
+  /*responsive*/
+@media(max-width:630px){
+    .movieCard h1 {
+        
+        font-size: 22px;
+    }
+}
+@media(max-width:868px){
+   
+    .swiper-pagination-bullet{
+        display: none;
+    }
+}

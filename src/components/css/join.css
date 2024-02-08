@@ -1,0 +1,59 @@
+.join{
+    background-image: url(../../assests/img/movie-background.jpg);
+    background-size: cover;
+    position: relative;
+    color: white;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    background-position: center center;
+}
+.join::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--over-lay);
+}
+.join .container{
+position: relative;
+}
+.join .container h1{
+    margin-bottom: 14px;
+}
+.join .container .row{
+display: flex;
+}
+.join .container .row p{
+    max-width: 540px;
+    font-size: 20px;
+    line-height: 29px;
+    margin-right: 191px;
+}
+.join .container .row ul{
+    font-size: 19px;
+}
+.join .container .row ul li{
+    margin-bottom: 2px;
+}
+
+/*responsive*/
+@media(max-width:1080px){
+    .join .container .row {
+        justify-content: space-between;
+    }
+    .join .container .row p {
+        margin-right: 32px;
+        max-width: 420px;
+    }
+}
+@media(max-width:850px){
+    .join .container .row {
+        flex-direction: column;
+    }
+    .join .container .row p {
+        margin-bottom: 20px;
+        margin-right: 0;
+    }
+}

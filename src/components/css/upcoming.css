@@ -1,0 +1,38 @@
+.upcoming{
+    background-image: url('../../assests/img/3846574.jpg');
+    position: relative;
+    color: white;
+    padding-top: 20px;
+}
+.upcoming::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--main-color);
+    opacity: .9;
+}
+
+.upcoming .container{
+    display: flex;
+    overflow-x: scroll;
+    position: relative;
+    gap: 15px;
+    padding-bottom: 27px;
+}
+.upcoming .container::-webkit-scrollbar{
+    background-color: transparent;
+    height: 10px;
+}
+.upcoming .container::-webkit-scrollbar-thumb{
+    background-color: #EEEEEE;
+    border-radius: 10px;
+}
+.upcoming>h1{
+    position: relative;
+    text-align: center;
+    margin-bottom: 21px;
+}
+

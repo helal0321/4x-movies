@@ -1,0 +1,16 @@
+.cast_slider{
+    
+        display: flex;
+        overflow-x: scroll;
+        gap: 13px;
+        padding-bottom: 25px;
+    
+}
+.cast_slider::-webkit-scrollbar{
+    background-color: transparent;
+    height: 10px;
+}
+.cast_slider::-webkit-scrollbar-thumb{
+    background-color: #BDBDBD;
+    border-radius: 10px;
+}

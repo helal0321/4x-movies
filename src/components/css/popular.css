@@ -1,0 +1,11 @@
+.popular{
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+}
+.popular .container{
+
+}
+.popular .container>h1{
+    margin-bottom: 13px;
+}

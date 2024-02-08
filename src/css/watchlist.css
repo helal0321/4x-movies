@@ -1,0 +1,29 @@
+.watchlist{
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.watchlist .container>h1{
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--over-lay);
+    width: fit-content;
+    padding-bottom: 5px;
+}
+.watchlist .cardContainer{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.no_items{
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 20px;
+    background-color: var(--over-lay);
+    border: 1px solid var(--main-color);
+    padding: 15px;
+    border-radius: 16px;
+}
+/*responsive*/
+@media(max-width:560px){
+    .watchlist .cardContainer{
+        padding: 0;
+    }
+}

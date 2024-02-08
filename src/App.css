@@ -1,0 +1,43 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+.container{
+  margin: auto;
+
+}
+@media (max-width: 767px) {
+  .container{
+    width: 90%;
+  }
+}
+
+/* Styles for tablets */
+@media (min-width: 768px) {
+  .container{
+    width: 90%;
+  }
+}
+
+/* Styles for desktops and larger screens */
+@media (min-width: 992px) {
+  .container{
+    width: 90%;
+  }
+}
+:root{
+  --main-color:rgb(3,37,65);
+  --over-lay:#6a1b9abd;
+  
+}
+a{
+  text-decoration: none;
+}
+.bodyPage{
+  min-height: calc(100vh - 265px);
+}
+
+
+

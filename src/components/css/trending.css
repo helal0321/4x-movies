@@ -1,0 +1,62 @@
+.trending{
+    padding-top: 28px;
+    padding-bottom: 28px;
+}
+.trending .container{
+
+}
+.trending .container .buttons{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.trending .container .buttons h1{
+    margin-right: 44px;
+}
+.trending .container .buttons .btn{
+    border: 2px solid var(--main-color);
+    border-radius: 17px;
+    overflow: hidden;
+    height: 36px;
+    width: 195px;
+    position: relative;
+}
+.trending .container .buttons .btn label{
+
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    color: var(--main-color);
+    transition: .3s;
+    height: 100%;
+    width: 50%;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}
+.trending .container .buttons .btn input[type='radio']{
+    width: 0;
+    height: 0;
+}
+.trending .container .buttons .btn input[type='radio']:checked+label{
+    background-color: var(--main-color);
+    color: white;
+}
+.trending .container .buttons .btn button:first-child{
+
+}
+.trending .container .buttons .btn button:last-child{
+
+}
+
+/*responsive*/
+
+@media(max-width:400px){
+    .trending .container .buttons {
+        flex-direction: column;
+    }
+    .trending .container .buttons h1 {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}

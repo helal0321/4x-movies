@@ -1,0 +1,52 @@
+.landing{
+background-image: url('../assests/img/background.jpg');
+background-size: cover;
+height: 516px;
+position: relative;
+}
+.landing .overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-color);
+    opacity: 45%;
+}
+.landing .container{
+    position: relative;
+    padding-top: 192px;
+    overflow: hidden;
+}
+
+.landing .box{
+    color: white;
+    backdrop-filter: blur(4px);
+    width: fit-content;
+    padding: 10px;
+    border: 1px solid var(--main-color);
+    border-radius: 5px;
+    overflow: hidden;
+}
+.landing .box h1{
+    font-size: 39px;
+    margin-bottom: 25px;
+}
+.landing .box p{
+    max-width: 678px;
+    font-size: 19px;
+    line-height: 26px;
+}
+
+/*responsive*/
+@media(max-width:580px){
+    .landing .container {
+        padding-top: 50px;
+    }
+}
+
+@media(max-width:370px){
+    .landing .box h1 {
+        font-size: 24px;
+    }
+}

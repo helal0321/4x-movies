@@ -1,0 +1,54 @@
+.popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 5000;
+}
+.popup::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0000008a;
+
+}
+.popup button{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: none;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    background-color: red;
+    transform: translate(50%, -50%);
+    cursor: pointer;
+}
+.popup iframe{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.popop_container{
+    position: absolute;
+    width: 73%;
+    height: 67%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+/*responsive*/
+
+
+
+
+

@@ -1,0 +1,17 @@
+.cast_card{
+    border: 1px solid #eee;
+    box-shadow: 0px 5px 9px 3px #eee;
+}
+.cast_card img{
+    width: 202px;
+    height: 234px;
+}
+.cast_card .box{
+    padding: 8px;
+}
+.cast_card .box h3{
+
+}
+.cast_card .box p{
+
+}

@@ -1,0 +1,35 @@
+.upcoming .card{
+
+}
+.upcoming .card .vidio{
+position: relative;
+}
+.upcoming .card .vidio span{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.upcoming .card .vidio span svg{
+    font-size: 46px;
+}
+.upcoming .card .vidio img{
+    width: 357px;
+    border-radius: 5px;
+    height: 217px;
+}
+.upcoming .card .box{
+text-align: center;
+}
+.upcoming .card .box h1{
+font-size: 25px;
+}
+
+/*responsive*/
+@media(max-width:420px){
+    .upcoming .card .vidio img {
+        width: 235px;
+        height: 190px;
+}
+}

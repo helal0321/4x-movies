@@ -1,0 +1,132 @@
+.parentMovies{
+
+}
+.parentMovies>.container{
+display: flex;
+}
+.filter{
+    width: 20%;
+    min-width: 260px;
+    margin-right: 35px;
+    border: 1px solid #E0E0E0;
+    box-shadow: 1px 1px 17px 3px #E0E0E0;
+    margin-top: 35px;
+    height: -moz-fit-content;
+    height: fit-content;
+    border-radius: 5px;
+    padding-bottom: 10px;
+    
+}
+.filter h1{
+    padding: 10px;
+    color: var(--main-color);
+    border-bottom: 1px solid #E0E0E0;
+}
+.filter .box{
+    padding: 10px;
+   
+}
+.filter .box:not(:last-child){
+    border-bottom: 1px solid #9E9E9E;
+}
+.filter .box h2{
+    margin-bottom: 7px;
+    color: var(--main-color);
+}
+.filter .box select{
+    max-width: 157px;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.filter .box select option{
+
+}
+.filter .box input[type='checkbox']{
+    width: 0;
+    height: 0;
+}
+.filter .box label{
+    border: 1px solid #9E9E9E;
+    border-radius: 17px;
+    padding: 6px;
+    display: inline-block;
+    margin-bottom: 10px;
+    transition: .3s;
+    cursor: pointer;
+}
+.filter .box input[type='checkbox']:checked+label{
+    background-color: #03A9F4;
+    color: white;
+    border-color: #03A9F4;
+}
+
+.movies{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    flex: 1;
+}
+.movies .container{
+
+}
+.movies .container>h1{
+    margin-bottom: 21px;
+    width: fit-content;
+    border-bottom: 2px solid var(--over-lay);
+    color: var(--main-color);
+}
+.movies .moviesContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    grid-row-gap: 12px;
+    margin-bottom: 25px;
+    column-gap: 10px;
+}
+.movies button{
+    border: none;
+    background-color: #1976D2;
+    color: white;
+    width: 272px;
+    font-size: 16px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 33px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.notFound{
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 20px;
+    background-color: var(--over-lay);
+    border: 1px solid var(--main-color);
+    padding: 15px;
+    border-radius: 16px;
+}
+/*responsive*/
+
+@media(max-width:630px){
+    .parentMovies>.container {
+        flex-direction: column;
+    }
+    .filter{
+        width: 100%;
+    }
+}
+
+@media(max-width:320px){
+    .filter{
+        min-width: 0;
+    }
+    .movies button {
+        width: 100%;
+    }
+}
+@media(max-width:523px){
+    .movies .container>h1 {
+        width: 100%;
+        text-align: center;
+    }
+
+}

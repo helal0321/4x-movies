@@ -1,0 +1,218 @@
+.movie_details{
+
+}
+.movie_details .container{
+
+}
+
+.movie_details .background{
+
+
+position: relative;
+color: white;
+}
+.movie_details .background::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--over-lay);
+}
+.movie_details .background .box_container{
+    position: relative;
+    display: flex;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    align-items: center;
+}
+.movie_details .background .image{
+    margin-right: 166px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.movie_details .background .image img{
+    max-width: 100%;
+    width: 286px;
+    height: 344px;
+
+}
+.movie_details .background .image .box{
+    background-color: var(--main-color);
+    padding: 7px;
+}
+.movie_details .background .image  p{
+    color: #eeee;
+}
+.movie_details .background .image span{
+    font-weight: bold;
+}
+.movie_details .background .info h1{
+
+}
+.movie_details .background .info p{
+max-width: 800px;
+}
+.movie_details .background .info .icons{
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.movie_details .background .info .icons button{
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 18px;
+    margin-right: 17px;
+    cursor: pointer;
+}
+.movie_details .background .info .icons button.active{
+    color: var(--main-color);
+    position: relative;
+}
+.movie_details .background .info .icons button.active:after{
+    content: "movie is in the watchlist";
+    width: 82px;
+    display: inline-block;
+    font-size: 12px;
+    background-color: var(--main-color);
+    color: white;
+    position: absolute;
+    padding: 8px;
+    border-radius: 0 19px;
+    top: -51px;
+    right: 0;
+    line-height: 14px;
+    transition: .3s;
+    opacity: 0;
+
+    
+}
+.movie_details .background .info .icons button.active:before{
+    content: "";
+    width: 0;
+    height: 0;
+    background-color: transparent;
+    display: inline-block;
+    position: absolute;
+    top: -7px;
+    border: 7px solid var(--main-color);
+    border-color: var(--main-color) transparent transparent transparent;
+    left: 1px;
+    transition: .3s;
+    opacity: 0;
+
+}
+.movie_details .background .info .icons button.active:hover:after,
+.movie_details .background .info .icons button.active:hover:before{
+    opacity: 1;
+}
+.movie_details .background .info .icons>svg{
+    font-size: 27px;
+    margin-right: 33px;
+}
+.movie_details .background .info .icons p{
+
+}
+.movie_details .background .info .icons p svg{
+
+}
+.movie_details .background .info h2{
+
+}
+.movie_details .casting{
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.movie_details .casting h1{
+    margin-bottom: 20px;
+}
+.movie_details .cast_info{
+    display: flex;
+}
+.movie_details .cast_info .cast{
+
+    width: 90%;
+
+}
+.movie_details .cast_info  h2{
+    margin-bottom: 16px;
+
+}
+.movie_details .cast_info .info{
+    box-shadow: -11px 0px 15px 7px white;
+    flex: 1;
+    padding: 10px;
+    padding-left: 20px;
+}
+.movie_details .cast_info .info h4{
+
+}
+.movie_details .cast_info .info p{
+margin-bottom: 17px;
+}
+.movie_details .recommendations{
+    margin-bottom: 40px;
+}
+.movie_details .recommendations h1{
+margin-bottom: 20px;
+}
+.backgroundImage{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+/*responsive*/
+
+@media(max-width:1300px){
+.movie_details .background .box_container {
+    justify-content: space-between;
+    
+}
+.movie_details .background .image {
+    margin-right: 20px;
+    min-width: 250px;
+}
+
+}
+@media(max-width:850px){
+    .movie_details .cast_info {
+        flex-direction: column;
+    }
+    .movie_details .cast_info .cast {
+        width: 100%;
+    }
+    .movie_details .cast_info .info{
+        box-shadow: none;
+        padding: 0;
+        margin-top: 10px;
+    }
+    .movie_details .casting {
+        margin-bottom: 0;
+    }
+    
+}
+@media(max-width:650px){
+    .movie_details .background .box_container {
+        flex-direction: column;
+    }
+    .movie_details .background .image {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    .movie_details .box_container .info{
+        text-align: center;
+    }
+    .movie_details .background .info .icons {
+        justify-content: center;
+    }
+}
+@media(max-width:380px){
+.movie_details h1{
+    font-size: 25px;
+}
+}
