@@ -1,5 +1,5 @@
 const baseUrl='https://api.themoviedb.org/3/'
-const apiKey='ecb054ba5b9937f5cc725e5c599ededa'
+const apiKey=process.env.REACT_APP_API_KEY
 
 export const fetchData=async(endPoind,parameters='')=>{
     try{
