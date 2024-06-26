@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookmark,faPlay } from '@fortawesome/free-solid-svg-icons'
 import { json, useParams } from 'react-router-dom'
 import { useEffect,useState } from 'react'
-import { getUrl,openTrailer} from '../rtk/trailerslice'
 import { addMovie } from '../rtk/watchlistSlice'
 import { useDispatch } from 'react-redux'
 import TrailerPop from '../components/movie details/trailerPop';
@@ -14,12 +13,18 @@ import { useNavigate } from 'react-router-dom'
 import { fetchMovieDetails,fetchMovieRecommendations,fetchMovieTrailer } from '../api/movieDetails.api'
 
 function MovieDetails(){
-    let trailerState=useSelector((state)=>{return state.trailer})
+    const closeTrailerPopup=()=>{
+        setpopupOpened(false)
+        setTrailer("")
+    }
     let watchlist=useSelector((state)=>{return state.watchlist})
     let movieId=useParams().movieId
     let [movieDetails,setDetails]=useState({})
     let [recommendation,setRecommendation]=useState()
     let [trailer,setTrailer]=useState()
+    //
+    let [popupOpened,setpopupOpened]=useState(false)
+    //
     let dispatch=useDispatch()
     let navigate=useNavigate()
     let movieFound=watchlist.find((element)=>{  return element.id===+movieId})
@@ -55,7 +60,7 @@ function MovieDetails(){
     return(
     
         <div className="movie_details">
-             {(trailerState.opened)&&<TrailerPop />}
+             {(popupOpened)&&<TrailerPop url={trailer} closepopup={closeTrailerPopup}/>}
                             <div className="background" style={{backgroundImage:`url(https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces${movieDetails.backdrop_path})`}} >
 
                                 <div className='container'>
@@ -80,8 +85,9 @@ function MovieDetails(){
                             <FontAwesomeIcon icon={faBookmark} />
                         </button>
                            <button onClick={()=>{
-                               dispatch(getUrl(trailer))
-                                dispatch(openTrailer())
+                            //
+                               setpopupOpened(true)
+                               //
                            }}><p><FontAwesomeIcon icon={faPlay} /> Play Trailer</p></button> 
                         </div>
                         <h2>Overview</h2> 
